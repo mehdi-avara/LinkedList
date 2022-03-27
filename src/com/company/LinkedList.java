@@ -44,7 +44,7 @@ public class LinkedList {
         else{
             LinkedList temp = remote.nextObj;
             int holder = remote.size;
-
+        //work here
         }
 
     }
