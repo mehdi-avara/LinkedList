@@ -3,8 +3,12 @@ package com.company;
 public class LinkedList {
 
     Integer number;
-    LinkedList nextObj;
-    
+    private LinkedList nextObj;
+
+    LinkedList() {
+        nextObj = null;
+    }
+
     /***
      * adds the specified element to the end of the list
      ***/
@@ -76,7 +80,7 @@ public class LinkedList {
      * Returns the index of the first occurrence of the specified element in this list, or -1 if this list does not contain the element.
      ***/
     public int indexOf(Integer i) {
-return 1;
+        return 1;
     }
 
     /***
