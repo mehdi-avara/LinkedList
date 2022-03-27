@@ -1,6 +1,10 @@
 package com.company;
 
 public class LinkedList {
+
+    Integer number;
+    LinkedList nextObj;
+    
     /***
      * adds the specified element to the end of the list
      ***/
