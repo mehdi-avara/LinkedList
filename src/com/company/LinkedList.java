@@ -13,6 +13,10 @@ public class LinkedList {
      * adds the specified element to the end of the list
      ***/
     public boolean add(Integer element) {
+        LinkedList holder = this;
+        while (holder.nextObj != null) {
+            holder = holder.nextObj;
+        }
         return true;
     }
 
