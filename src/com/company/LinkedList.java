@@ -2,7 +2,7 @@ package com.company;
 
 public class LinkedList {
 
-    Integer number;
+    private Integer number;
     private LinkedList nextObj;
 
     LinkedList() {
@@ -17,6 +17,8 @@ public class LinkedList {
         while (holder.nextObj != null) {
             holder = holder.nextObj;
         }
+        holder.number = element;
+        holder.nextObj=new LinkedList();
         return true;
     }
 
