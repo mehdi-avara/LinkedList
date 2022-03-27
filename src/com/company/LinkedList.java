@@ -4,7 +4,7 @@ public class LinkedList {
 
     private Integer number;
     private LinkedList nextObj;
-
+    private int size;
     LinkedList() {
         nextObj = null;
     }
@@ -19,6 +19,7 @@ public class LinkedList {
         }
         holder.number = element;
         holder.nextObj=new LinkedList();
+        size++;
         return true;
     }
 
@@ -27,7 +28,9 @@ public class LinkedList {
      * at the specified index of your list
      ***/
     public void add(int index, Integer element) {
-
+        int thisIndex = 0;
+        while (thisIndex!=index-1) {
+        }
     }
 
     /***
