@@ -39,6 +39,11 @@ public class LinkedList {
      * in the specified linkedlist to the end of this list
      ***/
     public boolean addAll(LinkedList linkedlist) {
+        LinkedList remoteHolder=this;
+        while (remoteHolder.nextObj.nextObj!=null){
+            remoteHolder=remoteHolder.nextObj;
+        }
+        remoteHolder.nextObj=linkedlist;
         return true;
     }
 
