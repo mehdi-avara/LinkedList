@@ -124,8 +124,10 @@ public class LinkedList {
      * Retrieves and removes the head (first element) of this list.
      ***/
     public Integer remove() {
-
-        return null;
+        Integer result = this.number;
+        this.number=this.nextObj.number;
+        this.nextObj=this.nextObj.nextObj;
+        return result;
     }
 
     /***
