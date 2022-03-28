@@ -4,7 +4,6 @@ public class LinkedList {
 
     private Integer number;
     private LinkedList nextObj;
-    private int size;
 
     LinkedList() {
         nextObj = null;
@@ -20,7 +19,6 @@ public class LinkedList {
         }
         holder.number = element;
         holder.nextObj = new LinkedList();
-        size++;
         return true;
     }
 
@@ -32,19 +30,9 @@ public class LinkedList {
 
         LinkedList remote = this;
         int thisIndex = 0;
-        this.size++;
         while (thisIndex != index && remote.nextObj != null) {
             remote = remote.nextObj;
             thisIndex++;
-        }
-        if (remote.nextObj == null) {
-            remote.number = element;
-            remote.nextObj = new LinkedList();
-        }
-        else{
-            LinkedList temp = remote.nextObj;
-            int holder = remote.size;
-        //work here
         }
 
     }
