@@ -149,6 +149,6 @@ public class LinkedList {
      * Returns true if this list contains no elements.
      ***/
     public boolean isEmpty() {
-        return true;
+        return nextObj==null;
     }
 }
