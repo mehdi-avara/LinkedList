@@ -60,7 +60,12 @@ public class LinkedList {
      * inserts a specified element at the beginning of this list
      ***/
     public void addFirst(Integer element) {
-
+        LinkedList remoteHolder = this.nextObj;
+        Integer numberHolder = this.number;
+        this.number = element;
+        this.nextObj = new LinkedList();
+        this.nextObj.nextObj = remoteHolder;
+        this.nextObj.number = numberHolder;
     }
 
     /***
