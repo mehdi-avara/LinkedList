@@ -27,14 +27,16 @@ public class LinkedList {
      * at the specified index of your list
      ***/
     public void add(int index, Integer element) {
-
-        LinkedList remote = this;
-        int thisIndex = 0;
-        while (thisIndex != index && remote.nextObj != null) {
-            remote = remote.nextObj;
-            thisIndex++;
+        if (index == 0 || this.nextObj == null) {
+            LinkedList remoteHolder = this.nextObj;
+            Integer numberHolder = this.number;
+            this.number = element;
+            this.nextObj = new LinkedList();
+            this.nextObj.nextObj = remoteHolder;
+            this.nextObj.number = numberHolder;
+        } else {
+            this.nextObj.add(index - 1, element);
         }
-
     }
 
     /***
