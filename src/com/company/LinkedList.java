@@ -108,7 +108,16 @@ public class LinkedList {
      * Returns the index of the first occurrence of the specified element in this list, or -1 if this list does not contain the element.
      ***/
     public int indexOf(Integer i) {
-        return 1;
+        LinkedList linkedList=this;
+        int count = 0;
+        while (linkedList.nextObj != null) {
+            if (linkedList.number.equals(i)){
+                return count;
+            }
+            linkedList=linkedList.nextObj;
+            count++;
+        }
+        return -1;
     }
 
     /***
