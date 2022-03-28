@@ -136,8 +136,11 @@ public class LinkedList {
      *  Returns the element that was removed from the list.
      ***/
     public Integer remove(int index) {
-
-        return null;
+        LinkedList linkedList=this;
+        for (int i = 0; i < index; i++) {
+            linkedList=linkedList.nextObj;
+        }
+        return linkedList.remove();
     }
 
     /***
