@@ -28,12 +28,7 @@ public class LinkedList {
      ***/
     public void add(int index, Integer element) {
         if (index == 0 || this.nextObj == null) {
-            LinkedList remoteHolder = this.nextObj;
-            Integer numberHolder = this.number;
-            this.number = element;
-            this.nextObj = new LinkedList();
-            this.nextObj.nextObj = remoteHolder;
-            this.nextObj.number = numberHolder;
+            addFirst(element);
         } else {
             this.nextObj.add(index - 1, element);
         }
