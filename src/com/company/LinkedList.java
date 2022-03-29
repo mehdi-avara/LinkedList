@@ -46,7 +46,7 @@ public class LinkedList {
      ***/
     public boolean addAll(LinkedList linkedlist) {
         LinkedList remoteHolder = this;
-        while (remoteHolder.nextObj.nextObj != null) {
+        while (remoteHolder.nextObj != null) {
             remoteHolder = remoteHolder.nextObj;
         }
         remoteHolder.nextObj = linkedlist;
