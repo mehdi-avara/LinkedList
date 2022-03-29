@@ -184,8 +184,13 @@ public class LinkedList {
      * Returns an array containing all of the elements in this list in proper sequence.
      ***/
     public Integer[] toArray() {
-
-        return new Integer[0];
+        Integer[] result = new Integer[this.size()];
+        LinkedList linkedList = this;
+        for (int i = 0; i < result.length; i++) {
+            result[i]=linkedList.number;
+            linkedList=linkedList.nextObj;
+        }
+        return result;
     }
 
     /***
