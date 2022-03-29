@@ -106,7 +106,13 @@ private boolean addTo0Index(LinkedList linkedList){
      * Returns `true` if this list contains the specified element.
      ***/
     public boolean contains(Integer i) {
-        return true;
+        LinkedList linkedList =this;
+        while (linkedList.nextObj!=null){
+            if (i.equals(linkedList.number)){
+                return true;
+            }
+        }
+        return false;
     }
 
     /***
