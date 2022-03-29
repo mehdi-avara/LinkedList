@@ -32,11 +32,9 @@ public class LinkedList {
 //        } else {
 //            this.nextObj.add(index - 1, element);
 //        }
-        int count = 0;
         LinkedList linkedList = this;
-        while (count != index || this.nextObj == null) {
+        for (int i = 0; i < index; i++) {
             linkedList = linkedList.nextObj;
-            count++;
         }
         linkedList.addFirst(element);
 
