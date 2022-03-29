@@ -171,8 +171,13 @@ public class LinkedList {
      * Returns the number of elements in this list.
      ***/
     public int size() {
-
-        return 0;
+        int count = 0;
+        LinkedList linkedList=this;
+        while (linkedList.nextObj!=null) {
+            count++;
+            linkedList=linkedList.nextObj;
+        }
+        return count;
     }
 
     /***
