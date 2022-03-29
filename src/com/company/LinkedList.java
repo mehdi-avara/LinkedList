@@ -121,7 +121,11 @@ public class LinkedList {
      * Returns the element at the specified position in this list.
      ***/
     public Integer get(int index) {
-        return null;
+        LinkedList linkedList = this;
+        for (int i = 0; i < index; i++) {
+            linkedList=linkedList.nextObj;
+        }
+        return linkedList.number;
     }
 
     /***
