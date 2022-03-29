@@ -91,7 +91,7 @@ private boolean addTo0Index(LinkedList linkedList){
      * appends the specified element at the end of this list
      ***/
     public void addLast(Integer element) {
-
+        add(element);
     }
 
     /***
