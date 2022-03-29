@@ -45,6 +45,11 @@ public class LinkedList {
      * in the specified linkedlist to the end of this list
      ***/
     public boolean addAll(LinkedList linkedlist) {
+        if (this.isEmpty()){
+            this.number= linkedlist.number;
+            this.nextObj=linkedlist.nextObj;
+            return true;
+        }
         LinkedList remoteHolder = this;
         while (remoteHolder.nextObj != null) {
             remoteHolder = remoteHolder.nextObj;
