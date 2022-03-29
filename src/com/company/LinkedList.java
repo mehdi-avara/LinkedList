@@ -111,6 +111,7 @@ public class LinkedList {
             if (i.equals(linkedList.number)) {
                 return true;
             }
+            linkedList=linkedList.nextObj;
         }
         return false;
     }
