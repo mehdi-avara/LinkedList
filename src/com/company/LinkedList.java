@@ -98,7 +98,8 @@ private boolean addTo0Index(LinkedList linkedList){
      * Removes all of the elements from this list. The list will be empty after this call returns.
      ***/
     public void clear() {
-
+        this.nextObj=null;
+        this.number=null;
     }
 
     /***
