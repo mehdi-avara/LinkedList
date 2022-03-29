@@ -61,9 +61,20 @@ public class LinkedList {
      * in the specified linkedlist starting at the specified index
      ***/
     public boolean addAll(int index, LinkedList linkedlist) {
-        return true;
-    }
+        LinkedList holder=this;
+        for (int i = 0; i < index; i++) {
+            holder=holder.nextObj;
+        }
 
+        return holder.addTo0Index(linkedlist);
+    }
+private boolean addTo0Index(LinkedList linkedList){
+        linkedList.add(this.number);
+        linkedList.addAll(this.nextObj);
+        this.number= linkedList.number;
+        this.nextObj=linkedList.nextObj;
+        return true;
+}
     /***
      * inserts a specified element at the beginning of this list
      ***/
