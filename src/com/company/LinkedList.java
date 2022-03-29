@@ -34,8 +34,8 @@ public class LinkedList {
 //        }
         int count = 0;
         LinkedList linkedList = this;
-        while (count!=index || this.nextObj == null) {
-            linkedList=linkedList.nextObj;
+        while (count != index || this.nextObj == null) {
+            linkedList = linkedList.nextObj;
             count++;
         }
         linkedList.addFirst(element);
@@ -47,11 +47,11 @@ public class LinkedList {
      * in the specified linkedlist to the end of this list
      ***/
     public boolean addAll(LinkedList linkedlist) {
-        LinkedList remoteHolder=this;
-        while (remoteHolder.nextObj.nextObj!=null){
-            remoteHolder=remoteHolder.nextObj;
+        LinkedList remoteHolder = this;
+        while (remoteHolder.nextObj.nextObj != null) {
+            remoteHolder = remoteHolder.nextObj;
         }
-        remoteHolder.nextObj=linkedlist;
+        remoteHolder.nextObj = linkedlist;
         return true;
     }
 
@@ -61,20 +61,22 @@ public class LinkedList {
      * in the specified linkedlist starting at the specified index
      ***/
     public boolean addAll(int index, LinkedList linkedlist) {
-        LinkedList holder=this;
+        LinkedList holder = this;
         for (int i = 0; i < index; i++) {
-            holder=holder.nextObj;
+            holder = holder.nextObj;
         }
 
         return holder.addTo0Index(linkedlist);
     }
-private boolean addTo0Index(LinkedList linkedList){
+
+    private boolean addTo0Index(LinkedList linkedList) {
         linkedList.add(this.number);
         linkedList.addAll(this.nextObj);
-        this.number= linkedList.number;
-        this.nextObj=linkedList.nextObj;
+        this.number = linkedList.number;
+        this.nextObj = linkedList.nextObj;
         return true;
-}
+    }
+
     /***
      * inserts a specified element at the beginning of this list
      ***/
@@ -98,17 +100,17 @@ private boolean addTo0Index(LinkedList linkedList){
      * Removes all of the elements from this list. The list will be empty after this call returns.
      ***/
     public void clear() {
-        this.nextObj=null;
-        this.number=null;
+        this.nextObj = null;
+        this.number = null;
     }
 
     /***
      * Returns `true` if this list contains the specified element.
      ***/
     public boolean contains(Integer i) {
-        LinkedList linkedList =this;
-        while (linkedList.nextObj!=null){
-            if (i.equals(linkedList.number)){
+        LinkedList linkedList = this;
+        while (linkedList.nextObj != null) {
+            if (i.equals(linkedList.number)) {
                 return true;
             }
         }
@@ -126,13 +128,13 @@ private boolean addTo0Index(LinkedList linkedList){
      * Returns the index of the first occurrence of the specified element in this list, or -1 if this list does not contain the element.
      ***/
     public int indexOf(Integer i) {
-        LinkedList linkedList=this;
+        LinkedList linkedList = this;
         int count = 0;
         while (linkedList.nextObj != null) {
-            if (linkedList.number.equals(i)){
+            if (linkedList.number.equals(i)) {
                 return count;
             }
-            linkedList=linkedList.nextObj;
+            linkedList = linkedList.nextObj;
             count++;
         }
         return -1;
@@ -143,8 +145,8 @@ private boolean addTo0Index(LinkedList linkedList){
      ***/
     public Integer remove() {
         Integer result = this.number;
-        this.number=this.nextObj.number;
-        this.nextObj=this.nextObj.nextObj;
+        this.number = this.nextObj.number;
+        this.nextObj = this.nextObj.nextObj;
         return result;
     }
 
@@ -154,9 +156,9 @@ private boolean addTo0Index(LinkedList linkedList){
      *  Returns the element that was removed from the list.
      ***/
     public Integer remove(int index) {
-        LinkedList linkedList=this;
+        LinkedList linkedList = this;
         for (int i = 0; i < index; i++) {
-            linkedList=linkedList.nextObj;
+            linkedList = linkedList.nextObj;
         }
         return linkedList.remove();
     }
@@ -181,6 +183,6 @@ private boolean addTo0Index(LinkedList linkedList){
      * Returns true if this list contains no elements.
      ***/
     public boolean isEmpty() {
-        return nextObj==null;
+        return nextObj == null;
     }
 }
