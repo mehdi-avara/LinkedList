@@ -27,11 +27,6 @@ public class LinkedList {
      * at the specified index of your list
      ***/
     public void add(int index, Integer element) {
-//        if (index == 0 || this.nextObj == null) {
-//            addFirst(element);
-//        } else {
-//            this.nextObj.add(index - 1, element);
-//        }
         LinkedList linkedList = this;
         for (int i = 0; i < index; i++) {
             linkedList = linkedList.nextObj;
